@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "bootstrap": "^3.4.1",
+    "grunt-cli": "^1.4.3",
+    "jquery": "^3.7.0"
+  },
+  "devDependencies": {
+    "less": "^4.1.3"
+  }
+}
