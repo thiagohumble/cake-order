@@ -48,12 +48,6 @@ function sendForm() {
 					this.reset();
 				});
 		})
-		.fail(function() {
-			console.log("error");
-		})
-		.always(function() {
-			console.log("complete");
-		});
 	}
 
 	if ($('#cake-order-form').valid()) sendForm();
