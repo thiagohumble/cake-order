@@ -4,31 +4,43 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Document</title>
+		<link rel="stylesheet" href="./Assets/Javascript/Plugins/node_modules/bootstrap/dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="./Assets/Less/main.css">
+
 	</head>
 	<body>
-		<main>
 
-			<div>
-				<p>Cake Order Form</p>
-				<p>Order your freshly baked cakes made using only the finest quality natural ingredients.</p>
+
+
+		<main class="cakeContainer container">
+			<div class="cakeContainer-containerTitle">
+				<p class="cakeContainer-ContainerTitle_title">Cake Order Form</p>
+				<p class="cakeContainer-ContainerTitle_subtitle">Order your freshly baked cakes made using only the finest quality natural ingredients.</p>
 			</div>
 			<hr>
-			<div>
-				<p>Please choose your favorite cake from among the following:*</p>
-				<img src="./Assets/Img/cake1.jpg" alt="">
-				<img src="./Assets/Img/cake2.jpg" alt="">
-				<img src="./Assets/Img/cake3.jpg" alt="">
-				<img src="./Assets/Img/cake4.jpg" alt="">
-			</div>	
-			<form action="">
+			<form action="" class="cakeContainer-form" id="cake-order-form" method="POST">
+					<p>Please choose your favorite cake from among the following:<span style="color: red !important; display: inline; float: none;">*</span></p>
+
+					<div>
+						<input type="radio" id="cakeone" data-id="1" name="contact" value="cake1" checked/>
+						<label for="cakeone"><img src="./Assets/Img/cake1.jpg" alt="cake1"></label>
+
+						<input type="radio" id="caketwo" data-id="2" name="contact" value="cake2" />
+						<label for="caketwo"><img src="./Assets/Img/cake2.jpg" alt="cake2"></label>
+
+						<input type="radio" id="caketree" data-id="3" name="contact" value="cake3" />
+						<label for="caketree"><img src="./Assets/Img/cake3.jpg" alt="cake3"></label>
+
+						<input type="radio" id="cakefour" data-id="4" name="contact" value="cake4" />
+						<label for="cakefour"><img src="./Assets/Img/cake4.jpg" alt="cake4"></label>
+					</div>
 				<p>Order Information</p>
-				<div>
-					<label for="fname">Name<span style="color: red !important; display: inline; float: none;">*</span></label>
-					<input type="text" name="fname" id="fname" placeholder="First">
-					<label for="lname"></label>
-					<input type="text" name="lname" id="lname" placeholder="Last">
-				</div>
+				<div class="form-group">
+						<label for="fname">Name<span style="color: red !important; display: inline; float: none;">*</span></label><br>
+						<input type="text" name="fname" id="fname" placeholder="First" required>
+						<label for="lname"></label>
+						<input type="text" name="lname" id="lname" placeholder="Last" required>
+					</div>
 				<div>
 					<div>
 						<label for="ddate">Delivery date</label>
@@ -43,12 +55,12 @@
 				</div>
 				<div>
 					<div>
-						<label for="phone">Phone<span style="color: red !important; display: inline; float: none;">*</span></label>
-						<input type="text" name="phone" id="phone" placeholder="### ### ####">
+						<label for="phoneid">Phone<span style="color: red !important; display: inline; float: none;">*</span></label>
+						<input type="text" name="phoneid" id="phoneid" placeholder="### ### ####" required>
 					</div>
 					<div>
 						<labe for="email">Email<span style="color: red !important; display: inline; float: none;">*</span></labe>
-						<input type="text" name="email" id="email" >
+						<input type="text" name="email" id="email" required>
 						<span>To receive the complete receipt</span>
 					</div>
 				</div>
@@ -311,8 +323,14 @@
 						<option value="Zimbabwe">Zimbabwe</option>
 					</select>
 				</div>
+				<button id="cakeSubmintBtn">Order</button>
 			</form>
-			<button>Order</button>
 		</main>
 	</body>
+
+<script src="./Assets/Javascript/Plugins/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./Assets/Javascript/Plugins/node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="./Assets/Javascript/Plugins/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./Assets/Javascript/main.js"></script>
+
 </html>
