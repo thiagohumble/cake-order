@@ -10,8 +10,25 @@
 	</head>
 	<body>
 
+		<span type="button" class="" data-toggle="modal" data-target="#exampleModal"></span>
 
-
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						Pedido enviado com sucesso
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
 		<main class="cakeContainer container">
 			<div class="cakeContainer-containerTitle">
 				<p class="cakeContainer-ContainerTitle_title">Cake Order Form</p>
@@ -22,16 +39,16 @@
 					<p>Please choose your favorite cake from among the following:<span style="color: red !important; display: inline; float: none;">*</span></p>
 
 					<div>
-						<input type="radio" id="cakeone" data-id="1" name="contact" value="cake1" checked/>
+						<input type="radio" class="cake" id="cakeone" data-id="1" name="cake" value="cake1" checked/>
 						<label for="cakeone"><img src="./Assets/Img/cake1.jpg" alt="cake1"></label>
 
-						<input type="radio" id="caketwo" data-id="2" name="contact" value="cake2" />
+						<input type="radio" class="cake" id="caketwo" data-id="2" name="cake" value="cake2" />
 						<label for="caketwo"><img src="./Assets/Img/cake2.jpg" alt="cake2"></label>
 
-						<input type="radio" id="caketree" data-id="3" name="contact" value="cake3" />
+						<input type="radio" class="cake" id="caketree" data-id="3" name="cake" value="cake3" />
 						<label for="caketree"><img src="./Assets/Img/cake3.jpg" alt="cake3"></label>
 
-						<input type="radio" id="cakefour" data-id="4" name="contact" value="cake4" />
+						<input type="radio" class="cake" id="cakefour" data-id="4" name="cake" value="cake4" />
 						<label for="cakefour"><img src="./Assets/Img/cake4.jpg" alt="cake4"></label>
 					</div>
 				<p>Order Information</p>
@@ -45,12 +62,12 @@
 					<div>
 						<label for="ddate">Delivery date</label>
 						<span><img src="./Assets/Img/calendar.png" alt=""></span>
-						<input type="text" name="ddate" id="ddate" placeholder="MM/DD/YYYY">
+						<input type="date" name="ddate" id="ddate" placeholder="MM/DD/YYYY" required>
 					</div>
 					<div>
 						<label for="pdelivery">Preterred delivery time</label>
 						<span><img src="./Assets/Img/clock.png" alt=""></span>
-						<input type="text" name="pdelivery" id="pdelivery" placeholder="HH:MM AM">
+						<input type="time" name="pdelivery" id="pdelivery" placeholder="HH:MM AM">
 					</div>
 				</div>
 				<div>
