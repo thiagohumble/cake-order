@@ -1,16 +1,25 @@
 .cakeContainer {
 	.cakeContainer {
 		&-form {
-			&__cakeChoose {
-				.col-md-6 {
-					padding-left: 0;
-				}
-			}
-		}
-	}
-	.cakeContainer {
-		&-form {
 			&__contactClient {
+				.fname {
+					position: absolute;
+					font-weight: 800;
+				}
+				.fieldRequired {
+					color: red;
+					display: inline;
+					float: none;
+				}
+				input.error {
+					border: 1px solid red;
+				}
+				label.error {
+					position: absolute;
+					bottom: -24px;
+					left: 0;
+					color: red;
+				}
 				input, select {
 					height: 40px;
 					border: 1px solid grey;
@@ -26,6 +35,9 @@
 				}
 				.col-md-6, .col-md-12  {
 					padding-left: 0;
+					@media (max-width: 995px) { 
+						padding-right: 0;
+					}
 					input{
 						width: 100%;
 					}
