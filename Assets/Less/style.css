@@ -8,12 +8,46 @@ span img {
   width: 20px;
   height: 20px;
 }
+.cakeContainer-form__cakeChoose input {
+  width: 50px;
+  height: 20px;
+  vertical-align: middle;
+}
+.cakeContainer-form__cakeChoose .col-md-6 {
+  padding-left: 0;
+  padding-right: 0;
+}
+@media (max-width: 995px) {
+  .cakeContainer-form__cakeChoose {
+    text-align: center;
+  }
+}
+@media (min-width: 995px) {
+  .cakeContainer-form__cakeChoose .form-row div:nth-child(2) {
+    text-align: right;
+  }
+}
 .cakeContainer-form__cakeChoose label img {
   width: 190px;
   height: 140px;
 }
-.cakeContainer .cakeContainer-form__cakeChoose .col-md-6 {
-  padding-left: 0;
+.cakeContainer .cakeContainer-form__contactClient .fname {
+  position: absolute;
+  font-weight: 800;
+}
+.cakeContainer .cakeContainer-form__contactClient .fieldRequired {
+  color: red;
+  display: inline;
+  float: none;
+}
+.cakeContainer .cakeContainer-form__contactClient input.error {
+  border: 1px solid red;
+}
+.cakeContainer .cakeContainer-form__contactClient label.error {
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+  color: red;
 }
 .cakeContainer .cakeContainer-form__contactClient input,
 .cakeContainer .cakeContainer-form__contactClient select {
@@ -33,9 +67,18 @@ span img {
 .cakeContainer .cakeContainer-form__contactClient .col-md-12 {
   padding-left: 0;
 }
+@media (max-width: 995px) {
+  .cakeContainer .cakeContainer-form__contactClient .col-md-6,
+  .cakeContainer .cakeContainer-form__contactClient .col-md-12 {
+    padding-right: 0;
+  }
+}
 .cakeContainer .cakeContainer-form__contactClient .col-md-6 input,
 .cakeContainer .cakeContainer-form__contactClient .col-md-12 input {
   width: 100%;
+}
+.padding-right-none {
+  padding-right: 0;
 }
 body {
   background-color: #ebf6fc;
@@ -44,4 +87,16 @@ body {
   max-width: 700px;
   margin-top: 70px;
   margin-bottom: 70px;
+}
+#cakeSubmintBtn {
+  background-color: #24457b;
+  width: 130px;
+  height: 50px;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  font-size: 18px;
+}
+#cakeSubmintBtn:hover {
+  background-color: #24557b;
 }

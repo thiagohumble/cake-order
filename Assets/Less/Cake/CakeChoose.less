@@ -7,6 +7,25 @@ span img {
 .cakeContainer {
 	&-form {
 		&__cakeChoose{
+			input {
+				width: 50px;
+				height: 20px;
+				vertical-align: middle;
+			}
+			.col-md-6 {
+				padding-left: 0;
+				padding-right: 0;
+			}
+			@media (max-width: 995px) { 
+				text-align: center;
+			}
+			@media (min-width: 995px) { 
+				.form-row {
+					div:nth-child(2) {
+						text-align: right;
+					}
+				}
+			}
 			label {
 				img {
 					width: 190px;

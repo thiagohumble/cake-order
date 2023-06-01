@@ -66,12 +66,12 @@
 					<div class="cakeContainer-form__contactClient">
 						<div class="form-row">
 							<p class="cakeContainer-form__contactClient-title">Order Information</p>
-							<p>Name<span style="color: red !important; display: inline; float: none;">*</span></p>
+							<div class="fname">Name<span class="fieldRequired">*</span></div>
 							<div class="form-group col-md-6">
 								<label for="fname"></label>
 								<input type="text" name="fname" id="fname" placeholder="First" required>
 							</div>
-							<div class="form-group col-md-6">
+							<div class="form-group col-md-6 padding-right-none">
 								<label for="lname"></label>
 								<input type="text" name="lname" id="lname" placeholder="Last" required>
 							</div>
@@ -82,7 +82,7 @@
 								<label for="ddate">Delivery date</label><br/>
 								<input type="date" name="ddate" id="ddate" placeholder="MM/DD/YYYY" required>
 							</div>
-							<div class="form-group col-md-6">
+							<div class="form-group col-md-6 padding-right-none">
 								<label for="pdelivery">Preterred delivery time</label><br/>
 								<input type="time" name="pdelivery" id="pdelivery" placeholder="HH:MM AM">
 							</div>
@@ -90,22 +90,22 @@
 
 						<div class="form-row">
 							<div class="form-group col-md-6">
-								<label for="phoneid">Phone<span style="color: red !important; display: inline; float: none;">*</span></label><br/>
+								<label for="phoneid">Phone<span class="fieldRequired">*</span></label><br/>
 								<input type="text" name="phoneid" id="phoneid" placeholder="### ### ####" required>
 							</div>
-							<div class="form-group col-md-6">
-								<label for="email">Email<span style="color: red !important; display: inline; float: none;">*</span></label><br/>
+							<div class="form-group col-md-6 padding-right-none">
+								<label for="email">Email<span class="fieldRequired">*</span></label><br/>
 								<input type="text" name="email" id="email" required><br/>
 								<span class="msgInfoEmail">To receive the complete receipt</span>
 							</div>
 						</div>
 
 						<div class="form-row">
-							<div class="form-group col-md-12">
+							<div class="form-group col-md-12 padding-right-none">
 								<label for="address">Address</label><br/>
 								<input  type="text" name="address" id="address" placeholder="Street Address">
 							</div>
-							<div class="form-group col-md-12">
+							<div class="form-group col-md-12 padding-right-none">
 								<label for="addresstwo"></label><br/>
 								<input type="text" name="addresstwo" id="addresstwo" placeholder="Street Address Line 2">
 							</div>
@@ -116,7 +116,7 @@
 								<label for="city"></label><br/>
 								<input type="text" name="city" id="city" placeholder="City">
 							</div>
-							<div class="form-group col-md-6">
+							<div class="form-group col-md-6 padding-right-none">
 								<label for="region"></label><br/>
 								<input type="text" name="region" id="region" placeholder="Region">
 							</div>
@@ -127,7 +127,7 @@
 								<label for="zipcode"></label><br/>
 								<input type="text" name="zipcode" id="zipcode" placeholder="Postal / Zip Code">
 							</div>
-							<div class="form-group col-md-6">
+							<div class="form-group col-md-6 padding-right-none">
 								<label for="country"></label><br/>
 								<select id="country" name="country" class="form-control">
 									<option value="Afghanistan">Afghanistan</option>
