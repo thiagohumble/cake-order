@@ -84,7 +84,7 @@ $("#cake-order-form").validate({
     phoneid: {
       required: true,
       number: true,
-      maxlength: 10
+      minlength: 10
     }
   }
 });
