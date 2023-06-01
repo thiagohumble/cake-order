@@ -1,21 +1,47 @@
-img {
-  width: 200px;
-  height: 200px;
+.cakeContainer-ContainerTitle_title {
+  font-size: 26px;
+}
+hr {
+  border-top: 1px solid grey;
 }
 span img {
   width: 20px;
   height: 20px;
 }
+.cakeContainer-form__cakeChoose label img {
+  width: 190px;
+  height: 140px;
+}
+.cakeContainer .cakeContainer-form__cakeChoose .col-md-6 {
+  padding-left: 0;
+}
+.cakeContainer .cakeContainer-form__contactClient input,
+.cakeContainer .cakeContainer-form__contactClient select {
+  height: 40px;
+  border: 1px solid grey;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.cakeContainer .cakeContainer-form__contactClient .msgInfoEmail {
+  font-size: 10px;
+  color: grey;
+}
+.cakeContainer .cakeContainer-form__contactClient-title {
+  font-size: 26px;
+}
+.cakeContainer .cakeContainer-form__contactClient .col-md-6,
+.cakeContainer .cakeContainer-form__contactClient .col-md-12 {
+  padding-left: 0;
+}
+.cakeContainer .cakeContainer-form__contactClient .col-md-6 input,
+.cakeContainer .cakeContainer-form__contactClient .col-md-12 input {
+  width: 100%;
+}
 body {
   background-color: #ebf6fc;
 }
 .cakeContainer {
-  border: 1px solid black;
   max-width: 700px;
-}
-.cakeContainer .col-md-6 {
-  padding-left: 0;
-}
-.cakeContainer .col-md-6 input {
-  width: 100%;
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
