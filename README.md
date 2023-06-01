@@ -15,5 +15,6 @@ Tools used:
 - jvalidate
 - jquery
 - NPM
+- bootstrap
 
 
