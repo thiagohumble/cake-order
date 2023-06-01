@@ -1,12 +1,18 @@
+$('#ddate').change(function(event) {
+	var str = $(this).val();
+	var date = new Date(str.split('/').reverse().join('/'));
+	var newDate = new Date();
+	(date < newDate) ? $('#cakeSubmintBtn').attr("disabled", 'disabled') : $('#cakeSubmintBtn').removeAttr("disabled", 'disabled')
+});
+
 $('#cake-order-form').submit(function(e){
-	e.preventDefault();
 
 	var name = $('#fname').val() +' '+ $('#lname').val();
-
+	var form = $('#cake-order-form');
 	var title = $('.cakeContainer-ContainerTitle_title').text();
 	var phone = $('#phoneUS').val();
 	var email = $('#email').val();
-	var cakeId = $('#id').data('id');
+	var cakeId = $('input[name="cake"]:checked').data('id');
 	var order = {
 		title: title,
 		body: 
@@ -14,7 +20,6 @@ $('#cake-order-form').submit(function(e){
 			"Pedido": {
 				"Cliente": [
 				{
-					"No": "1",
 					"Name": name,
 					"Phone": phone,
 					"email": email
@@ -24,32 +29,24 @@ $('#cake-order-form').submit(function(e){
 				{
 					"id": cakeId
 				}
-				],
-				"Solicitado em": "Dec 2022"
+				]
 			}
 		}
 	}
 
-	function cakeSelected(){
-		const data = new FormData(form);
-		let output = "";
-		for (const entry of data) {
-			output = `${output}${entry[0]}=${entry[1]}\r`;
-		}
-		log.innerText = output;
-	}
-
-	function sendForm() {
+function sendForm() {
 		$.ajax({
 			type: 'POST',
 			url: 'https://jsonplaceholder.typicode.com/posts',
 			data: order,
 			success: function(response){
-				console.log(response)
 			}
 		})
 		.done(function() {
-			console.log("success");
+				$('span[type="button"').trigger( "click" );
+				$('#cake-order-form').each (function(){
+					this.reset();
+				});
 		})
 		.fail(function() {
 			console.log("error");
