@@ -16,5 +16,6 @@ Tools used:
 - jquery
 - NPM
 - bootstrap
+- BEM
 
 
