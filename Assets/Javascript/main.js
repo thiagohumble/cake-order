@@ -2,7 +2,12 @@ $('#ddate').change(function(event) {
 	var str = $(this).val();
 	var date = new Date(str.split('/').reverse().join('/'));
 	var newDate = new Date();
-	(date < newDate) ? $('#cakeSubmintBtn').attr("disabled", 'disabled') : $('#cakeSubmintBtn').removeAttr("disabled", 'disabled')
+	if (date < newDate) {
+	 $('#cakeSubmintBtn').attr("disabled", 'disabled');
+	 $('#ddate-error').text("Date must be later than today's date");
+	} else {
+		$('#cakeSubmintBtn').removeAttr("disabled", 'disabled')
+	}
 });
 
 $('#cake-order-form').submit(function(e){
@@ -48,12 +53,6 @@ function sendForm() {
 					this.reset();
 				});
 		})
-		.fail(function() {
-			console.log("error");
-		})
-		.always(function() {
-			console.log("complete");
-		});
 	}
 
 	if ($('#cake-order-form').valid()) sendForm();
