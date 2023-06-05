@@ -100,3 +100,6 @@ body {
 #cakeSubmintBtn:hover {
   background-color: #24557b;
 }
+#cakeSubmintBtn:disabled {
+  background-color: gray;
+}
